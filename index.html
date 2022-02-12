@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/app.js"></script>
+    <title>Plant List</title>
+</head>
+<body>
+    <h1>Plant List</h1>
+    <form id="plant-list">
+        <label for="names" class= "primary">Name</label>
+        <input type="text" id="names" required/>
+        
+
+        <label for="species" class="primary">Species</label>
+        <input type="text" id="species" required/>
+
+
+        <label for="origin" class="primary">Origin</label>
+            <select>
+                <option value="" disabled selected></option>
+                <option value="Asia">Asia</option>
+                <option value="America">America</option>
+                <option value="Africa">Africa</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Europe">Europe</option>
+                <option value="Antarctica">Antarctica</option>
+            </select>
+
+
+        <input type="submit" value="save"/>
+    </form>
+
+<div id="names-list">
+
+</div>
+</body>
+</html>
