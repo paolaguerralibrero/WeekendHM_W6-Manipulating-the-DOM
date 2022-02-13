@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const form = document.querySelector('form')
 form.addEventListener('submit', handleFormSubmit);
 
+const deleteAllButton = document.querySelector('#delete-all');  
+deleteAllButton.addEventListener('click', handleDeleteAllClick); 
+
 })
 
 const handleFormSubmit = function(event){
@@ -32,26 +35,18 @@ const createPlantItem = function (form) {
     const origin = document.createElement('p');
     origin.textContent = form.origin.value;
     newPlantItem.appendChild(origin);
+
+    const description = document.createElement('p');
+    description.textContent = form.description.value;
+    newPlantItem.appendChild(description);
     
     return newPlantItem;
 }
 
 
+const handleDeleteAllClick = function (event) {
+    const plantList = document.querySelector('#plant-list');
+    plantList.innerHTML = '';
+  }
 
 
-
-
-
-
-
-
-
-// const handleFormSubmit = function(event){
-//     event.preventDefault();
-//     const name = event.target.names.value;
-//     console.log(event.target.names.value);
-//     const nameElement = document.createElement('p')
-//     nameElement.textContent = name
-//     const namesList = document.querySelector('#names-list');
-//     namesList.appendChild(nameElement);
-// }

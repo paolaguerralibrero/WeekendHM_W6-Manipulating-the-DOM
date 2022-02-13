@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/app.js"></script>
+    <link rel="stylesheet" href="static/style.css"> 
     <title>Plant list</title>
 </head>
 <body>
     <h1>Make a list of your plants</h1>
-    <form id="plant-list">
+    <form id="plant-list-form">
         <label for="names" class= "primary">Name</label>
         <input type="text" id="names" required/>
         
@@ -29,13 +30,19 @@
                 <option value="Antarctica">Antarctica</option>
             </select>
 
+        <label for="description" class="primary">Description</label>
+        <input type="text" id="description" required/>
 
         <input type="submit" value="save"/>
     </form>
+    
+    <button id="delete-all">Delete All</button>
 
     <h1>Plant List</h1>
     
     <ul id="plant-list"></ul>
+
+   
 
 </div>
 </body>
